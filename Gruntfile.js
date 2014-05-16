@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 tasks: ['browserify']
             },
             coffee: {
-              files: 'react_components/*.coffee',
+              files: 'src/*.coffee',
               tasks: ['coffee:compile']
             }
         },
@@ -23,27 +23,30 @@ module.exports = function(grunt) {
             }
         },
 
-        //coffee: {
-          //compile: {
-            //options: {
-              //bare: true,
-            //},
-            //files: {
-              //'react_components/Profile.jsx':'react_components/Profile.coffee'
-            //}
-          //}
-        //}
-
         coffee: {
           compile: {
-            expand: true,
-            flatten: true,
-            cwd: "#{__dirname}/src/",
-            src: ['*.coffee'],
-            dest: 'react_components/',
-            ext: '.jsx'
+            options: {
+              bare: true,
+            },
+            files: {
+              'react_components/App.jsx':'src/App.coffee',
+              'react_components/Avatar.jsx':'src/Avatar.coffee',
+              'react_components/Bio.jsx':'src/Bio.coffee',
+              'react_components/Profile.jsx':'src/Profile.coffee'
+            }
           }
         }
+
+        //coffee: {
+          //compile: {
+            //expand: true,
+            //flatten: true,
+            //cwd: "src/",
+            //src: ['*.coffee'],
+            //dest: 'react_components/',
+            //ext: '.jsx'
+          //}
+        //}
 
 
     });

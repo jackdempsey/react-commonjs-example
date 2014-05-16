@@ -4,7 +4,7 @@ React  = require('react')
 Avatar = require('./Avatar.jsx')
 Bio    = require('./Bio.jsx')
 
-module.exports = React.createClass
+module.exports = React.createClass(
   render: ->
     `<div className="Profile">
         <h2 className="Profile-title">{this.props.username}</h2>
@@ -13,3 +13,4 @@ module.exports = React.createClass
             <Bio text={this.props.bio} />
         </div>
     </div>`
+)

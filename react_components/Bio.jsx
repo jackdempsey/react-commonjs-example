@@ -1,13 +1,12 @@
-/** @jsx React.DOM */
+/** @jsx React.DOM */;
+var React;
 
-var React = require('react');
+React = require('react');
 
 module.exports = React.createClass({
-    render: function() {
-        return (
-            <div className="Bio">
-                <p className="Bio-text">{this.props.text}</p>
-            </div>
-        )
-    }
+  render: function() {
+    return <div className="Bio">
+        <p className="Bio-text">{this.props.text}</p>
+    </div>;
+  }
 });
