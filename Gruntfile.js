@@ -28,25 +28,15 @@ module.exports = function(grunt) {
             options: {
               bare: true,
             },
-            files: {
-              'react_components/App.jsx':'src/App.coffee',
-              'react_components/Avatar.jsx':'src/Avatar.coffee',
-              'react_components/Bio.jsx':'src/Bio.coffee',
-              'react_components/Profile.jsx':'src/Profile.coffee'
-            }
+            expand: true,
+            flatten: true,
+            cwd: "src/",
+            src: ['*.coffee'],
+            dest: 'react_components/',
+            ext: '.jsx'
           }
         }
 
-        //coffee: {
-          //compile: {
-            //expand: true,
-            //flatten: true,
-            //cwd: "src/",
-            //src: ['*.coffee'],
-            //dest: 'react_components/',
-            //ext: '.jsx'
-          //}
-        //}
 
 
     });
