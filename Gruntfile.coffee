@@ -1,3 +1,5 @@
+# http://24ways.org/2013/grunt-is-not-weird-and-hard/
+# for reference if you get stuck with Grunt
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
