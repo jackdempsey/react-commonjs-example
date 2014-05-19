@@ -18,7 +18,7 @@ module.exports = (grunt) ->
 
       client:
         src: ["react_components/**/*.jsx"]
-        dest: "scripts/app.built.js"
+        dest: "public/scripts/app.built.js"
 
     coffee:
       compile:
