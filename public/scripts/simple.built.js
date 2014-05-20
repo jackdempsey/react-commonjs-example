@@ -1,11 +1,18 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var unique = require('uniq');
+var something = require('./something');
 
 var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
 
 console.log(unique(data));
 
-},{"uniq":2}],2:[function(require,module,exports){
+//console.log(something.Something.hello());
+
+console.dir(something);
+
+console.log(something.hello());
+
+},{"./something":3,"uniq":2}],2:[function(require,module,exports){
 "use strict"
 
 function unique_pred(list, compare) {
@@ -63,4 +70,11 @@ function unique(list, compare, sorted) {
 }
 
 module.exports = unique
+},{}],3:[function(require,module,exports){
+module.exports = {
+  hello: function() {
+    return "hello from Something";
+  }
+}
+
 },{}]},{},[1])
